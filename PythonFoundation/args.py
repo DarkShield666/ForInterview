@@ -13,5 +13,10 @@ func(1, 2, 3)
 func('string', 2, 3, b=3, cc=5)
 
 '''
-可变参数列表类型如图，而且参数类型必须按 a args kwargs顺序
+<class 'int'> <class 'tuple'> <class 'dict'>
+1 (2, 3) {}
+<class 'str'> <class 'tuple'> <class 'dict'>
+string (2, 3) {'b': 3, 'cc': 5}
+
+可变参数列表类型如结果输出，而且参数类型必须按 a args kwargs顺序
 '''
