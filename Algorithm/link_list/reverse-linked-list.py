@@ -20,4 +20,6 @@ class Solution:
         return pre
 
 
+if __name__ == '__main__':
+    print("yes")
 
