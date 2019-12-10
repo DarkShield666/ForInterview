@@ -23,6 +23,7 @@ print(type(yi))  # <class 'generator'>
 for i in yi:
     print(i)
 
+
 '''
 1
 2
