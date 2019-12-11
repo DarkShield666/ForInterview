@@ -14,21 +14,19 @@ def func2():
         yield m
 
 
-print(func1())
-print(func2())
+print(func1())   # 1
+print(func2())   # <generator object func2 at 0x1033eb0a0>
+
 
 yi = func2()
-print(type(yi))
+print(type(yi))  # <class 'generator'>
 for i in yi:
     print(i)
 
+
 '''
-1
-<generator object func2 at 0x103b6ee08>
-<class 'generator'>
 1
 2
 3
 4
-
 '''
