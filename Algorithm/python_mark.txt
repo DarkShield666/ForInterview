@@ -1,0 +1,100 @@
+一.自我介绍
+	个人信息
+		您好，我叫，毕业于，所学专业是
+	工作项目经历
+		之前就职于XX公司，担任..负责XX项目，对XX技术比较熟悉
+	求职意向
+		我的工作经验和目前这个岗位..
+
+二.行为面试
+	抗压能力，沟通能力，处理问题的能力
+	说说你曾经..
+	说说你做过的项目..
+	说说你碰到过的技术难题，如何解决的，项目最大的收获.
+	情境，任务，行动，结果
+	你还有什么要问问的吗？
+		工作内容，技术栈，团队，项目
+	讲讲你觉得最有技术含量的项目
+
+三.Python基础练习题
+	Python深拷贝与浅拷贝
+		可变数据类型跟不可变数据类型：
+			可变数据类型：
+				list；
+				浅拷贝：
+					a1 = ['s','w','d']
+					a = [1,2,a1]
+					copy(a)只复制a的内容
+				深拷贝：
+					deepcopy(a)时，当a1的内容变了不会影响到拷贝对象的值变化
+				深浅拷贝都是新开辟的内存地址
+
+			不可变数据类型：
+				元组，字符串；
+				浅拷贝：都是指向同一个对象
+				深拷贝：真正开辟内存空间
+
+	装饰器实现（语法糖果）
+		# 实现获取运行时间的装饰器
+		import time
+
+		def runtime(fuc):
+			def run_time():
+				start_time = time.time()
+				func()
+				end_time = time.time()
+				print(end_time - start_time)
+				return run_time
+
+		@runtime
+		def hello_world()
+			time.sleep(0.5)
+			print("hello world")
+
+		if __name__ == "__main__":
+			hello_world()
+
+	sort算法：
+		插入排序，希尔排序，直接排序，堆排序
+		冒泡排序，快速排序，归并排序，基数排序
+
+		给定一个列表排序，时间复杂度小于O(n^2)
+			常见的时间复杂度：
+				O(1),O(log2n),O(n)
+				O(nlog2n),O(n^2),O(n^3)
+
+		冒泡排序：
+			def bubble_sort(list):
+				for i in range(0,len(list)):
+					for j in range(i+1, len(list)):
+						if list[i] > list[j]:
+							list[i], list[j] = list[j], list[i]
+				return list
+
+
+		快排：
+			# 列表取第一个元素，作为标准，把比第一个元素小的放在左侧，比第一个元素大的放在右侧，
+			# O(nlog2n)
+			def quick_sort(list):
+				if list == []:
+					return
+				else:
+					first = list[0]
+					less = quick_sort([l for l in list[1:] if l < first])
+					more = quick_sort([m for m in list[1:] if m >= first])
+					return less + [first] + more
+
+
+四.网络
+	Cookie与Session
+		Cookie存储在客户端的头信息，服务端生成，客户端保存
+		Session存储在服务端（redis）
+
+	浏览器输入url中间经历的过程
+		本地DNS缓存查询，没有去DNS服务器查询
+		TCP握手，http请求
+		方向代理nginx，uwsgi/gunicorn（转发的web应用层）
+		web app响应（Flask）
+		TCP挥手
+
+
