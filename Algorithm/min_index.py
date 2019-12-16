@@ -24,7 +24,7 @@ def min_index_two(li: list) -> list:
 
 
 if __name__ == '__main__':
-    a = [3,2,1,5,7,9,1,4,1,5]
+    a = [3, 2, 1, 5, 7, 9, 1, 4, 1, 5]
     r = min_index(a)
     r2 = min_index_two(a)
     print(r,r2)
