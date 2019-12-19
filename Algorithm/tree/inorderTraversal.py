@@ -28,6 +28,7 @@ class Tree:
         self.root = None
         self.lis = []
 
+        # 以下三个lis主要用于遍历打印存储，非必须
         self.preRsult = []
         self.inRsult = []
         self.postResult = []
@@ -46,7 +47,6 @@ class Tree:
                 rootNode.right = node
                 self.lis.append(rootNode.right)
                 self.lis.pop(0)
-
 
     def preOrderTraversal(self, root):
         if root == None:
@@ -127,8 +127,9 @@ class Tree:
 
 
 if __name__ == '__main__':
+    li = [1, None, 2, 3]
     T = Tree()
-    for i in range(1,11):
+    for i in li:
         T.addNode(i)
 
     T.preOrderTraversal(T.root)
