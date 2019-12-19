@@ -46,7 +46,7 @@ class Tree:
             elif rootNode.right == None:
                 rootNode.right = node
                 self.lis.append(rootNode.right)
-                self.lis.pop(0)
+                self.lis.pop(0)                     # 弹出lis的第一个元素
 
     def preOrderTraversal(self, root):
         if root == None:
@@ -75,7 +75,6 @@ class Tree:
         if root == None:
             return
         self.inOrderTraversal(root.left)
-        # print(root.val)
         self.inRsult.append(root.val)
         self.inOrderTraversal(root.right)
 
