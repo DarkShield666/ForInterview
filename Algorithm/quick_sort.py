@@ -16,5 +16,5 @@ def quick_sort(array):
         return quick_sort(left) + [m] + quick_sort(right)
 
 
-ll = [5,6,1,3,13,3,6,7,2,6]
+ll = [5, 6, 1, 3, 13, 3, 6, 7, 2, 6]
 print(quick_sort(ll))
